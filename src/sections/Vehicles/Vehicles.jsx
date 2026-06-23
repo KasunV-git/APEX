@@ -1,11 +1,8 @@
-import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { vehicles } from '../../data/vehicles';
-import VehicleCard from '../../components/VehicleCard';
+import VehicleCard from './VehicleCard';
 
-const Vehicles = () => {
-  const [selectedVehicle, setSelectedVehicle] = useState(vehicles[1]); // Default to Electra
-
+const Vehicles = ({ selectedVehicle, setSelectedVehicle }) => {
   return (
     <section id="vehicles" className="py-24 relative">
       <div className="container mx-auto px-6">

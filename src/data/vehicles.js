@@ -21,6 +21,14 @@ export const vehicles = [
       "Premium Interior",
       "Smooth Performance"
     ],
+    performance: {
+      hp: 220,
+      hpSuffix: "",
+      range: 650,
+      acceleration: 7.2,
+      accelPrefix: "",
+      tech: "Smart Safety Suite"
+    },
     image: "/images/anora-placeholder.jpg"
   },
   {
@@ -45,6 +53,14 @@ export const vehicles = [
       "Race Inspired Cockpit",
       "Lightning Fast Acceleration"
     ],
+    performance: {
+      hp: 1000,
+      hpSuffix: "+",
+      range: 800,
+      acceleration: 2.5,
+      accelPrefix: "< ",
+      tech: "Advanced Hybrid Performance"
+    },
     image: "/images/electra-placeholder.jpg"
   },
   {
@@ -69,6 +85,14 @@ export const vehicles = [
       "Advanced Entertainment Systems",
       "Exceptional Ride Comfort"
     ],
+    performance: {
+      hp: 650,
+      hpSuffix: "",
+      range: 900,
+      acceleration: 4.5,
+      accelPrefix: "",
+      tech: "Executive Hybrid Platform"
+    },
     image: "/images/prestige-placeholder.jpg"
   },
   {
@@ -92,6 +116,14 @@ export const vehicles = [
       "Intelligent Safety Systems",
       "Refined Driving Experience"
     ],
+    performance: {
+      hp: 550,
+      hpSuffix: "",
+      range: 850,
+      acceleration: 5.0,
+      accelPrefix: "",
+      tech: "Intelligent Luxury Hybrid"
+    },
     image: "/images/leos-placeholder.jpg"
   }
 ];

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { vehicles } from './data/vehicles';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Loader from './components/Loader';
@@ -13,6 +14,7 @@ import Contact from './sections/Contact/Contact';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [selectedVehicle, setSelectedVehicle] = useState(vehicles[0]);
 
   useEffect(() => {
     // Simulate initial loading sequence
@@ -31,8 +33,8 @@ function App() {
           <Navbar />
           <main>
             <Hero />
-            <Vehicles />
-            <Performance />
+            <Vehicles selectedVehicle={selectedVehicle} setSelectedVehicle={setSelectedVehicle} />
+            <Performance selectedVehicle={selectedVehicle} />
             <Technologies />
             <Luxury />
             <FutureVision />
