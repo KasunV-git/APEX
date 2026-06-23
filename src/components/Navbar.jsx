@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import Button from './ui/Button';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,9 +44,9 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <a href="#contact" className="bg-primary/10 text-primary border border-primary hover:bg-primary hover:text-background transition-all duration-300 px-4 py-2 rounded-full text-sm font-semibold">
+              <Button href="#contact" className="!py-2 !px-6 text-xs">
                 Reserve Now
-              </a>
+              </Button>
             </div>
           </div>
           

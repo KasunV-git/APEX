@@ -10,10 +10,11 @@ const VehicleCard = ({ vehicle, onClick }) => {
       {/* 1. Image Area (220px fixed height) */}
       <div className="relative h-[220px] shrink-0 mb-6 overflow-hidden rounded-xl bg-gradient-to-br from-surface to-background border border-glass-border flex items-center justify-center">
         <div className="absolute inset-0 bg-primary/5 mix-blend-overlay"></div>
-        {/* Placeholder text mimicking a 3D model/image */}
-        <div className="text-text-muted font-heading uppercase tracking-widest text-2xl group-hover:scale-110 transition-transform duration-700 ease-out z-10">
-          {vehicle.name}
-        </div>
+        <img 
+          src={vehicle.image} 
+          alt={vehicle.name} 
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out z-0 relative"
+        />
         {/* Decorative lighting */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-1/4 bg-primary/20 blur-[30px]"></div>
       </div>
@@ -38,8 +39,9 @@ const VehicleCard = ({ vehicle, onClick }) => {
       
       {/* 4. Button Positioning & Divider */}
       <div className="mt-auto pt-6 border-t border-glass-border flex justify-center">
-        <Button className="w-full py-4 text-sm font-bold tracking-widest uppercase bg-surface hover:bg-primary hover:text-background border border-glass-border transition-colors shadow-none group-hover:shadow-[0_0_15px_rgba(0,229,255,0.2)]">
+        <Button className="w-full">
           Configure
+          <span className="transform transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
         </Button>
       </div>
     </Card>

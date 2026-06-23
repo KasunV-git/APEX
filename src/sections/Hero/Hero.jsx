@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaChevronDown } from 'react-icons/fa';
+import Button from '../../components/ui/Button';
 
 const Hero = () => {
   return (
@@ -27,7 +28,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 font-heading tracking-tighter"
+          className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-6 font-heading tracking-tighter"
         >
           <span className="text-gradient">DRIVE THE</span><br />
           <span className="text-text">FUTURE</span>
@@ -46,14 +47,14 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4"
+          className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4 sm:px-0"
         >
-          <button className="px-8 py-4 bg-primary text-background font-bold rounded-full hover:bg-white transition-colors duration-300">
+          <Button className="w-full sm:w-auto">
             Explore Vehicles
-          </button>
-          <button className="px-8 py-4 glass-panel text-text font-bold rounded-full hover:bg-surface-hover transition-colors duration-300">
+          </Button>
+          <Button className="w-full sm:w-auto">
             Discover Technology
-          </button>
+          </Button>
         </motion.div>
       </div>
 

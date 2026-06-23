@@ -24,6 +24,8 @@ export const vehicles = [
       "Smooth Performance"
     ],
     performance: {
+      titlePrefix: "Balanced",
+      titleHighlight: "Dynamics",
       hp: 220,
       hpSuffix: "",
       range: 650,
@@ -31,7 +33,7 @@ export const vehicles = [
       accelPrefix: "",
       tech: "Smart Safety Suite"
     },
-    image: "/images/anora-placeholder.jpg"
+    image: "/images/ANORA.png"
   },
   {
     id: "electra",
@@ -58,6 +60,8 @@ export const vehicles = [
       "Lightning Fast Acceleration"
     ],
     performance: {
+      titlePrefix: "Uncompromising",
+      titleHighlight: "Performance",
       hp: 1000,
       hpSuffix: "+",
       range: 800,
@@ -65,7 +69,7 @@ export const vehicles = [
       accelPrefix: "< ",
       tech: "Advanced Hybrid Performance"
     },
-    image: "/images/electra-placeholder.jpg"
+    image: "/images/ELECTRA.png"
   },
   {
     id: "prestige",
@@ -92,6 +96,8 @@ export const vehicles = [
       "Exceptional Ride Comfort"
     ],
     performance: {
+      titlePrefix: "Commanding",
+      titleHighlight: "Presence",
       hp: 650,
       hpSuffix: "",
       range: 900,
@@ -99,7 +105,7 @@ export const vehicles = [
       accelPrefix: "",
       tech: "Executive Hybrid Platform"
     },
-    image: "/images/prestige-placeholder.jpg"
+    image: "/images/PRESTIGE.png"
   },
   {
     id: "leos",
@@ -125,6 +131,8 @@ export const vehicles = [
       "Refined Driving Experience"
     ],
     performance: {
+      titlePrefix: "Effortless",
+      titleHighlight: "Excellence",
       hp: 550,
       hpSuffix: "",
       range: 850,
@@ -132,6 +140,6 @@ export const vehicles = [
       accelPrefix: "",
       tech: "Intelligent Luxury Hybrid"
     },
-    image: "/images/leos-placeholder.jpg"
+    image: "/images/LEOS.png"
   }
 ];

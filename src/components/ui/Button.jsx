@@ -1,23 +1,25 @@
-import { motion } from 'framer-motion';
-
-const Button = ({ children, variant = 'primary', className = '', ...props }) => {
-  const baseStyle = "px-6 py-3 rounded-full font-semibold tracking-wider transition-all duration-300 relative overflow-hidden";
+const Button = ({ children, className = '', href, ...props }) => {
+  const baseStyle = "group/btn inline-flex items-center justify-center gap-2 bg-primary/10 text-primary border-2 border-primary font-bold tracking-widest uppercase text-sm rounded-full transition-all duration-300 ease-out hover:bg-primary hover:text-background hover:-translate-y-[2px] hover:shadow-[0_0_20px_rgba(0,229,255,0.3)] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background cursor-pointer px-8 py-3.5";
   
-  const variants = {
-    primary: "bg-primary text-background hover:bg-accent hover:shadow-[0_0_20px_rgba(0,255,179,0.5)]",
-    secondary: "bg-transparent border-2 border-secondary text-white hover:bg-secondary/20 hover:shadow-[0_0_20px_rgba(123,97,255,0.4)]",
-    outline: "bg-transparent border-2 border-primary text-primary hover:bg-primary/10"
-  };
+  if (href) {
+    return (
+      <a 
+        href={href}
+        className={`${baseStyle} ${className}`}
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  }
 
   return (
-    <motion.button 
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      className={`${baseStyle} ${variants[variant]} ${className}`}
+    <button 
+      className={`${baseStyle} ${className}`}
       {...props}
     >
-      <span className="relative z-10">{children}</span>
-    </motion.button>
+      {children}
+    </button>
   );
 };
 

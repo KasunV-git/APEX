@@ -28,7 +28,7 @@ const Counter = ({ end, duration = 2, suffix = '' }) => {
   }, [inView, end, duration]);
 
   return (
-    <div ref={ref} className="text-5xl md:text-6xl font-bold font-heading text-text mb-2">
+    <div ref={ref} className="text-4xl sm:text-5xl md:text-6xl font-bold font-heading text-text mb-2">
       {count}{suffix}
     </div>
   );

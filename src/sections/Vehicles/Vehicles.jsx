@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { vehicles } from '../../data/vehicles';
 import VehicleCard from './VehicleCard';
+import Button from '../../components/ui/Button';
 
 const Vehicles = ({ selectedVehicle, setSelectedVehicle }) => {
   return (
@@ -84,7 +85,7 @@ const Vehicles = ({ selectedVehicle, setSelectedVehicle }) => {
                 className="grid lg:grid-cols-2 gap-12 items-center"
               >
                 {/* Image Side */}
-                <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-surface to-background border border-glass-border flex items-center justify-center">
+                <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-surface to-background border border-glass-border flex items-center justify-center">
                   <div className="absolute inset-0 bg-primary/5 mix-blend-overlay"></div>
                   <motion.div 
                     initial={{ scale: 0.9, opacity: 0 }}
@@ -127,13 +128,14 @@ const Vehicles = ({ selectedVehicle, setSelectedVehicle }) => {
                     </ul>
                   </div>
 
-                  <div className="flex gap-4">
-                    <button className="px-8 py-4 bg-primary text-background font-bold rounded-full hover:bg-white transition-all shadow-[0_0_20px_rgba(0,229,255,0.3)] hover:shadow-[0_0_30px_rgba(0,229,255,0.5)]">
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button className="w-full sm:w-auto">
                       Configure
-                    </button>
-                    <button className="px-8 py-4 bg-surface text-text font-bold rounded-full hover:bg-surface-hover transition-colors border border-glass-border">
+                      <span className="transform transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
+                    </Button>
+                    <Button className="w-full sm:w-auto">
                       Full Specs
-                    </button>
+                    </Button>
                   </div>
                 </div>
               </motion.div>

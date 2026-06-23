@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Button from '../../components/ui/Button';
 
 const Luxury = () => {
   const features = [
@@ -47,9 +48,9 @@ const Luxury = () => {
                 ))}
               </ul>
 
-              <button className="px-8 py-4 glass-panel text-text font-bold rounded-full hover:bg-surface-hover transition-colors">
+              <Button>
                 Explore Interiors
-              </button>
+              </Button>
             </motion.div>
           </div>
 

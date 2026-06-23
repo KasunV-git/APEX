@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import Button from '../../components/ui/Button';
 
 const Contact = () => {
   return (
@@ -96,9 +97,9 @@ const Contact = () => {
                 </select>
               </div>
 
-              <button className="w-full bg-primary text-background font-bold uppercase tracking-wider py-4 rounded-lg mt-4 hover:bg-white transition-colors shadow-[0_0_20px_rgba(0,229,255,0.2)]">
+              <Button className="w-full mt-4">
                 Request Information
-              </button>
+              </Button>
             </form>
           </motion.div>
 

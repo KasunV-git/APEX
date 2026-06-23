@@ -51,26 +51,21 @@ const Performance = ({ selectedVehicle }) => {
       <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/30 via-background to-background pointer-events-none"></div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold font-heading mb-4"
-          >
-            Uncompromising <span className="text-gradient">Performance</span>
-          </motion.h2>
-        </div>
-
         <AnimatePresence mode="wait">
-          <motion.div 
+          <motion.div
             key={selectedVehicle.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold font-heading mb-4">
+                {perf.titlePrefix} <span className="text-gradient">{perf.titleHighlight}</span>
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={`${selectedVehicle.id}-${index}`}
@@ -99,6 +94,7 @@ const Performance = ({ selectedVehicle }) => {
                 </h3>
               </motion.div>
             ))}
+            </div>
           </motion.div>
         </AnimatePresence>
       </div>
