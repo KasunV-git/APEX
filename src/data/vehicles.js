@@ -14,6 +14,8 @@ export const vehicles = [
       "Modern Safety Systems",
       "Balanced Performance"
     ],
+    range: "650 KM",
+    acceleration: "7.2s",
     highlights: [
       "Fuel Efficient",
       "Spacious Cabin",
@@ -46,6 +48,8 @@ export const vehicles = [
       "Track Focused Engineering",
       "Intelligent Performance Control"
     ],
+    range: "800 KM",
+    acceleration: "< 2.5s",
     highlights: [
       "1000+ HP",
       "Hybrid Hypercar Technology",
@@ -78,6 +82,8 @@ export const vehicles = [
       "Advanced Suspension",
       "Intelligent Comfort Systems"
     ],
+    range: "900 KM",
+    acceleration: "4.5s",
     highlights: [
       "Executive Lounge Package",
       "Hybrid Efficiency",
@@ -109,6 +115,8 @@ export const vehicles = [
       "Premium Interior Design",
       "Intelligent Driving Assistance"
     ],
+    range: "850 KM",
+    acceleration: "5.0s",
     highlights: [
       "Executive Rear Seating",
       "Luxury Craftsmanship",

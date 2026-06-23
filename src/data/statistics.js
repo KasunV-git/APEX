@@ -1,8 +1,6 @@
 export const statistics = [
-  { id: 1, label: "Vehicles Delivered", value: 50000, suffix: "+" },
-  { id: 2, label: "Superchargers Worldwide", value: 12000, suffix: "" },
-  { id: 3, label: "Autopilot Miles Driven", value: 2, suffix: "B" },
-  { id: 4, label: "Carbon Offset (Tons)", value: 500, suffix: "k" }
+  { label: "Vehicle Models", end: 4, color: "text-primary" },
+  { label: "Years of Innovation", end: 15, suffix: "+", color: "text-secondary" },
+  { label: "Future Technologies", end: 50, suffix: "+", color: "text-accent" },
+  { label: "Design Excellence", end: 100, suffix: "%", color: "text-primary" }
 ];
-
-export default statistics;
