@@ -5,7 +5,7 @@ import Button from '../../components/ui/Button';
 
 const Vehicles = ({ selectedVehicle, setSelectedVehicle }) => {
   return (
-    <section id="vehicles" className="py-24 relative">
+    <section id="vehicles" className="pt-24 pb-8 relative">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="mb-16 text-center">
@@ -29,7 +29,7 @@ const Vehicles = ({ selectedVehicle, setSelectedVehicle }) => {
         </div>
 
         {/* Vehicle Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mb-20">
           {vehicles.map((vehicle, index) => (
             <motion.div
               key={vehicle.id}
@@ -58,7 +58,7 @@ const Vehicles = ({ selectedVehicle, setSelectedVehicle }) => {
             className="glass-panel rounded-3xl p-8 lg:p-12"
           >
             {/* Tabs */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
               {vehicles.map((vehicle) => (
                 <button
                   key={vehicle.id}
@@ -85,7 +85,7 @@ const Vehicles = ({ selectedVehicle, setSelectedVehicle }) => {
                 className="grid lg:grid-cols-2 gap-12 items-center"
               >
                 {/* Image Side */}
-                <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-surface to-background border border-glass-border flex items-center justify-center">
+                <div className="relative h-[300px] lg:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-surface to-background border border-glass-border flex items-center justify-center">
                   <div className="absolute inset-0 bg-primary/5 mix-blend-overlay"></div>
                   <motion.div 
                     initial={{ scale: 0.9, opacity: 0 }}
@@ -109,15 +109,15 @@ const Vehicles = ({ selectedVehicle, setSelectedVehicle }) => {
                   <h3 className="text-sm font-bold text-accent tracking-widest uppercase mb-2">
                     {selectedVehicle.category}
                   </h3>
-                  <h4 className="text-4xl lg:text-5xl font-bold font-heading mb-6">
+                  <h4 className="text-4xl lg:text-5xl font-bold font-heading mb-4">
                     {selectedVehicle.name}
                   </h4>
-                  <p className="text-xl text-text-muted mb-8 italic border-l-4 border-primary pl-4">
+                  <p className="text-xl text-text-muted mb-6 italic border-l-4 border-primary pl-4">
                     "{selectedVehicle.tagline}"
                   </p>
 
-                  <div className="mb-8">
-                    <h5 className="text-lg font-semibold mb-4 border-b border-glass-border pb-2">Key Specifications</h5>
+                  <div className="mb-6">
+                    <h5 className="text-lg font-semibold mb-3 border-b border-glass-border pb-2">Key Specifications</h5>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
                       {selectedVehicle.specifications.map((spec, idx) => (
                         <li key={idx} className="flex items-center text-text-muted">

@@ -46,7 +46,7 @@ const Performance = ({ selectedVehicle }) => {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-background to-[#080b1f]">
+    <section className="pt-12 pb-24 relative overflow-hidden bg-gradient-to-b from-background to-[#080b1f]">
       {/* Dynamic Background */}
       <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/30 via-background to-background pointer-events-none"></div>
       
@@ -59,7 +59,7 @@ const Performance = ({ selectedVehicle }) => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="text-center mb-16">
+            <div className="text-center mb-8">
               <h2 className="text-4xl md:text-5xl font-bold font-heading mb-4">
                 {perf.titlePrefix} <span className="text-gradient">{perf.titleHighlight}</span>
               </h2>
