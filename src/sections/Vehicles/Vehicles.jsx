@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { vehicles } from '../../data/vehicles';
 import VehicleCard from './VehicleCard';
 import Button from '../../components/ui/Button';
+import { imagePath } from '../../utils/imagePath';
 
 const Vehicles = ({ selectedVehicle, setSelectedVehicle }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -116,7 +117,7 @@ const Vehicles = ({ selectedVehicle, setSelectedVehicle }) => {
                       className="absolute inset-0 flex items-center justify-center text-center z-10"
                     >
                       <img 
-                        src={`/images/${selectedVehicle.name}/${selectedVehicle.name} - ${["front", "rear", "side", "top"][currentImageIndex]}.png`} 
+                        src={imagePath(`images/${selectedVehicle.name}/${selectedVehicle.name} - ${["front", "rear", "side", "top"][currentImageIndex]}.png`)} 
                         alt={`${selectedVehicle.name} ${viewLabels[currentImageIndex]}`}
                         className="w-full h-full object-cover"
                       />

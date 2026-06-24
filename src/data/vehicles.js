@@ -1,3 +1,5 @@
+import { imagePath } from '../utils/imagePath';
+
 export const vehicles = [
   {
     id: "anora",
@@ -33,7 +35,7 @@ export const vehicles = [
       accelPrefix: "",
       tech: "Smart Safety Suite"
     },
-    image: "/images/ANORA.png"
+    image: imagePath("images/ANORA.png")
   },
   {
     id: "electra",
@@ -69,7 +71,7 @@ export const vehicles = [
       accelPrefix: "< ",
       tech: "Advanced Hybrid Performance"
     },
-    image: "/images/ELECTRA.png"
+    image: imagePath("images/ELECTRA.png")
   },
   {
     id: "prestige",
@@ -105,7 +107,7 @@ export const vehicles = [
       accelPrefix: "",
       tech: "Executive Hybrid Platform"
     },
-    image: "/images/PRESTIGE.png"
+    image: imagePath("images/PRESTIGE.png")
   },
   {
     id: "leos",
@@ -140,6 +142,6 @@ export const vehicles = [
       accelPrefix: "",
       tech: "Intelligent Luxury Hybrid"
     },
-    image: "/images/LEOS.png"
+    image: imagePath("images/LEOS.png")
   }
 ];
