@@ -1,6 +1,19 @@
 import { FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
+import { vehicles } from '../data/vehicles';
 
-const Footer = () => {
+const Footer = ({ setSelectedVehicle }) => {
+  const handleVehicleClick = (e, vehicleName) => {
+    e.preventDefault();
+    if (setSelectedVehicle) {
+      const vehicle = vehicles.find(v => v.name === vehicleName);
+      if (vehicle) setSelectedVehicle(vehicle);
+    }
+    const showcase = document.getElementById('vehicle-showcase');
+    if (showcase) {
+      showcase.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-background border-t border-white/10 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,9 +31,10 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Models</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-primary transition-colors">Apex Model X</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Apex S-Class</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Apex Roadster</a></li>
+              <li><a href="#vehicle-showcase" onClick={(e) => handleVehicleClick(e, 'Anora')} className="hover:text-primary transition-colors">Apex Anora</a></li>
+              <li><a href="#vehicle-showcase" onClick={(e) => handleVehicleClick(e, 'Electra')} className="hover:text-primary transition-colors">Apex Electra</a></li>
+              <li><a href="#vehicle-showcase" onClick={(e) => handleVehicleClick(e, 'Prestige')} className="hover:text-primary transition-colors">Apex Prestige</a></li>
+              <li><a href="#vehicle-showcase" onClick={(e) => handleVehicleClick(e, 'Leos')} className="hover:text-primary transition-colors">Apex Leos</a></li>
             </ul>
           </div>
 

@@ -41,7 +41,7 @@ function App() {
             <Statistics />
             <Contact />
           </main>
-          <Footer />
+          <Footer setSelectedVehicle={setSelectedVehicle} />
         </div>
       )}
     </>
