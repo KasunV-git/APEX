@@ -1,16 +1,55 @@
-# React + Vite
+# Apex Motors Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A futuristic automotive landing page built to practice modern frontend development, UI/UX design, and static website deployment using GitHub Pages.
 
-Currently, two official plugins are available:
+## Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project was created as a personal learning exercise to:
 
-## React Compiler
+* Practice landing page design and development
+* Improve React and frontend development skills
+* Experiment with modern UI/UX concepts
+* Learn responsive web design
+* Explore automotive-themed branding and presentation
+* Learn how to deploy static websites using GitHub Pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+* Modern automotive-inspired design
+* Responsive layout
+* Vehicle showcase section
+* Technology and innovation highlights
+* Luxury and sustainability sections
+* Interactive vehicle details
+* Contact and inquiry form
+* Smooth animations and transitions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+* React
+* Vite
+* Tailwind CSS
+* Framer Motion
+* JavaScript
+* HTML5
+* CSS3
+
+## Deployment
+
+This project is hosted using GitHub Pages for learning and demonstration purposes.
+
+## Disclaimer
+
+Apex Motors is a fictional automobile brand created solely for educational and portfolio purposes. Any vehicle models, specifications, logos, or brand elements shown in this project are fictional and do not represent a real company.
+
+## Learning Objectives
+
+* Component-based frontend architecture
+* Responsive web development
+* Modern UI/UX design principles
+* Git and GitHub workflow
+* Static website deployment with GitHub Pages
+
+---
+
+Created as a frontend development practice project.
