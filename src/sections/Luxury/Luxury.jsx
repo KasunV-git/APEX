@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { imagePath } from '../../utils/imagePath';
 import Button from '../../components/ui/Button';
 
 const Luxury = () => {
@@ -64,7 +65,7 @@ const Luxury = () => {
             >
               {/* Luxury Interior Image */}
               <img 
-                src="/images/luxury.png" 
+                src={imagePath('images/luxury.png')} 
                 alt="Apex Motors Luxury Interior" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
