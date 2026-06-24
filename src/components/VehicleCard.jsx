@@ -10,12 +10,11 @@ const VehicleCard = ({ vehicle, onClick }) => {
       onClick={() => onClick && onClick(vehicle)}
     >
       <div className="relative h-48 w-full bg-surface overflow-hidden">
-        {/* Placeholder for Vehicle Image - would be replaced by actual images */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-surface to-surface-hover flex items-center justify-center">
-          <span className="text-text-muted font-heading tracking-widest uppercase text-xl opacity-50">
-            {vehicle.name} Model
-          </span>
-        </div>
+        <img 
+          src={vehicle.image} 
+          alt={`${vehicle.name} model`}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
         <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay"></div>
       </div>
       

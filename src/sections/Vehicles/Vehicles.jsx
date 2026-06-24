@@ -1,9 +1,27 @@
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { vehicles } from '../../data/vehicles';
 import VehicleCard from './VehicleCard';
 import Button from '../../components/ui/Button';
 
 const Vehicles = ({ selectedVehicle, setSelectedVehicle }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Reset index when a new vehicle is selected
+  useEffect(() => {
+    setCurrentImageIndex(0);
+  }, [selectedVehicle]);
+
+  // Automatic slideshow timer
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % 4);
+    }, 3000); // Changes image every 3 seconds
+    return () => clearInterval(timer);
+  }, [selectedVehicle]);
+
+  const viewLabels = ["Front View", "Rear View", "Side View", "Top View"];
+
   return (
     <section id="vehicles" className="pt-24 pb-8 relative">
       <div className="container mx-auto px-6">
@@ -84,24 +102,39 @@ const Vehicles = ({ selectedVehicle, setSelectedVehicle }) => {
                 transition={{ duration: 0.4 }}
                 className="grid lg:grid-cols-2 gap-12 items-center"
               >
-                {/* Image Side */}
+                {/* Image Slideshow Side */}
                 <div className="relative h-[300px] lg:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-surface to-background border border-glass-border flex items-center justify-center">
-                  <div className="absolute inset-0 bg-primary/5 mix-blend-overlay"></div>
-                  <motion.div 
-                    initial={{ scale: 0.9, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: 0.2, duration: 0.5 }}
-                    className="text-center z-10"
-                  >
-                    <span className="text-text-muted font-heading tracking-[0.3em] uppercase text-2xl opacity-50 block mb-4">
-                      {selectedVehicle.name}
-                    </span>
-                    <span className="text-primary/40 font-heading tracking-widest uppercase text-xl">
-                      3D Model Placeholder
-                    </span>
-                  </motion.div>
+                  <div className="absolute inset-0 bg-primary/5 mix-blend-overlay z-10 pointer-events-none"></div>
+                  
+                  <AnimatePresence mode="wait">
+                    <motion.div 
+                      key={`${selectedVehicle.id}-${currentImageIndex}`}
+                      initial={{ opacity: 0, scale: 1.05 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.8 }}
+                      className="absolute inset-0 flex items-center justify-center text-center z-10"
+                    >
+                      <img 
+                        src={`/images/${selectedVehicle.name}/${selectedVehicle.name} - ${["front", "rear", "side", "top"][currentImageIndex]}.png`} 
+                        alt={`${selectedVehicle.name} ${viewLabels[currentImageIndex]}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </motion.div>
+                  </AnimatePresence>
+
                   {/* Decorative lighting for showcase */}
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-1/4 bg-primary/20 blur-[50px]"></div>
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-1/4 bg-primary/20 blur-[50px] z-10 pointer-events-none"></div>
+
+                  {/* Slideshow Indicators */}
+                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                    {[0, 1, 2, 3].map((idx) => (
+                      <div 
+                        key={idx} 
+                        className={`w-2 h-2 rounded-full transition-all duration-500 ${currentImageIndex === idx ? 'bg-primary w-6' : 'bg-white/20'}`}
+                      />
+                    ))}
+                  </div>
                 </div>
 
                 {/* Details Side */}
