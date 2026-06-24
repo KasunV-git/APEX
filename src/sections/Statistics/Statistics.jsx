@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { statistics } from '../../data/statistics';
 
 const Counter = ({ end, duration = 2, suffix = '' }) => {
   const [count, setCount] = useState(0);
@@ -27,19 +28,14 @@ const Counter = ({ end, duration = 2, suffix = '' }) => {
   }, [inView, end, duration]);
 
   return (
-    <div ref={ref} className="text-5xl md:text-6xl font-bold font-heading text-text mb-2">
+    <div ref={ref} className="text-4xl sm:text-5xl md:text-6xl font-bold font-heading text-text mb-2">
       {count}{suffix}
     </div>
   );
 };
 
 const Statistics = () => {
-  const stats = [
-    { label: "Vehicle Models", end: 4, color: "text-primary" },
-    { label: "Horsepower", end: 1000, suffix: "+", color: "text-secondary" },
-    { label: "Future Technologies", end: 50, suffix: "+", color: "text-accent" },
-    { label: "Design Excellence", end: 100, suffix: "%", color: "text-primary" }
-  ];
+  const stats = statistics;
 
   return (
     <section className="py-20 border-y border-glass-border bg-surface/30">

@@ -18,7 +18,8 @@ const Timeline = () => {
         />
         
         <div className="relative mt-16 max-w-4xl mx-auto">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-white/10 rounded-full"></div>
+          {/* Timeline Line: left aligned on mobile, centered on md+ */}
+          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-white/10 rounded-full"></div>
           
           {events.map((event, index) => (
             <motion.div 
@@ -27,13 +28,16 @@ const Timeline = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className={`relative flex items-center justify-between mb-16 ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}
+              className={`relative flex flex-col md:flex-row items-start md:items-center justify-between mb-16 pl-12 md:pl-0 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
             >
-              <div className="w-5/12"></div>
+              {/* Empty space for alternating layout on md+ */}
+              <div className="hidden md:block w-5/12"></div>
               
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary border-4 border-background z-10"></div>
+              {/* Timeline Dot: left aligned on mobile, centered on md+ */}
+              <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 mt-1.5 md:mt-0 w-6 h-6 rounded-full bg-primary border-4 border-background z-10"></div>
               
-              <div className={`w-5/12 bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
+              {/* Content Card */}
+              <div className={`w-full md:w-5/12 bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl text-left ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
                 <span className="text-accent font-bold text-xl block mb-2">{event.year}</span>
                 <h3 className="text-white font-bold text-lg mb-2">{event.title}</h3>
                 <p className="text-gray-400 text-sm">{event.description}</p>

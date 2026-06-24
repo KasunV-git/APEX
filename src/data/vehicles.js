@@ -14,6 +14,8 @@ export const vehicles = [
       "Modern Safety Systems",
       "Balanced Performance"
     ],
+    range: "650 KM",
+    acceleration: "7.2s",
     highlights: [
       "Fuel Efficient",
       "Spacious Cabin",
@@ -21,7 +23,17 @@ export const vehicles = [
       "Premium Interior",
       "Smooth Performance"
     ],
-    image: "/images/anora-placeholder.jpg"
+    performance: {
+      titlePrefix: "Balanced",
+      titleHighlight: "Dynamics",
+      hp: 220,
+      hpSuffix: "",
+      range: 650,
+      acceleration: 7.2,
+      accelPrefix: "",
+      tech: "Smart Safety Suite"
+    },
+    image: "/images/ANORA.png"
   },
   {
     id: "electra",
@@ -38,6 +50,8 @@ export const vehicles = [
       "Track Focused Engineering",
       "Intelligent Performance Control"
     ],
+    range: "800 KM",
+    acceleration: "< 2.5s",
     highlights: [
       "1000+ HP",
       "Hybrid Hypercar Technology",
@@ -45,7 +59,17 @@ export const vehicles = [
       "Race Inspired Cockpit",
       "Lightning Fast Acceleration"
     ],
-    image: "/images/electra-placeholder.jpg"
+    performance: {
+      titlePrefix: "Uncompromising",
+      titleHighlight: "Performance",
+      hp: 1000,
+      hpSuffix: "+",
+      range: 800,
+      acceleration: 2.5,
+      accelPrefix: "< ",
+      tech: "Advanced Hybrid Performance"
+    },
+    image: "/images/ELECTRA.png"
   },
   {
     id: "prestige",
@@ -62,6 +86,8 @@ export const vehicles = [
       "Advanced Suspension",
       "Intelligent Comfort Systems"
     ],
+    range: "900 KM",
+    acceleration: "4.5s",
     highlights: [
       "Executive Lounge Package",
       "Hybrid Efficiency",
@@ -69,7 +95,17 @@ export const vehicles = [
       "Advanced Entertainment Systems",
       "Exceptional Ride Comfort"
     ],
-    image: "/images/prestige-placeholder.jpg"
+    performance: {
+      titlePrefix: "Commanding",
+      titleHighlight: "Presence",
+      hp: 650,
+      hpSuffix: "",
+      range: 900,
+      acceleration: 4.5,
+      accelPrefix: "",
+      tech: "Executive Hybrid Platform"
+    },
+    image: "/images/PRESTIGE.png"
   },
   {
     id: "leos",
@@ -85,6 +121,8 @@ export const vehicles = [
       "Premium Interior Design",
       "Intelligent Driving Assistance"
     ],
+    range: "850 KM",
+    acceleration: "5.0s",
     highlights: [
       "Executive Rear Seating",
       "Luxury Craftsmanship",
@@ -92,6 +130,16 @@ export const vehicles = [
       "Intelligent Safety Systems",
       "Refined Driving Experience"
     ],
-    image: "/images/leos-placeholder.jpg"
+    performance: {
+      titlePrefix: "Effortless",
+      titleHighlight: "Excellence",
+      hp: 550,
+      hpSuffix: "",
+      range: 850,
+      acceleration: 5.0,
+      accelPrefix: "",
+      tech: "Intelligent Luxury Hybrid"
+    },
+    image: "/images/LEOS.png"
   }
 ];

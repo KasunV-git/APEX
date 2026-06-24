@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Button from '../../components/ui/Button';
 
 const Luxury = () => {
   const features = [
@@ -47,9 +48,9 @@ const Luxury = () => {
                 ))}
               </ul>
 
-              <button className="px-8 py-4 glass-panel text-text font-bold rounded-full hover:bg-surface-hover transition-colors">
+              <Button>
                 Explore Interiors
-              </button>
+              </Button>
             </motion.div>
           </div>
 
@@ -61,17 +62,14 @@ const Luxury = () => {
               viewport={{ once: true }}
               className="relative aspect-square md:aspect-[4/3] w-full rounded-3xl overflow-hidden glass-panel group"
             >
-              {/* Luxury Image Placeholder */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a] flex items-center justify-center">
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')] opacity-20"></div>
-                <span className="text-secondary/40 font-heading tracking-widest uppercase text-xl z-10">
-                  Interior Showcase View
-                </span>
-                
-                {/* Simulated ambient lighting */}
-                <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-primary/30 blur-[60px] group-hover:bg-accent/40 transition-colors duration-1000"></div>
-                <div className="absolute bottom-1/4 left-1/4 w-40 h-40 bg-secondary/30 blur-[80px]"></div>
-              </div>
+              {/* Luxury Interior Image */}
+              <img 
+                src="/images/luxury.png" 
+                alt="Apex Motors Luxury Interior" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              {/* Optional overlay for aesthetic blending */}
+              <div className="absolute inset-0 bg-primary/10 mix-blend-overlay pointer-events-none transition-opacity duration-700 group-hover:opacity-0"></div>
             </motion.div>
           </div>
 
